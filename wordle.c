@@ -8,11 +8,13 @@ int main()
     wordle partida;
     char palabra[MAX_LETRAS], solucion[MAX_LETRAS];
     int resultado, idioma, letra_correcta, i;
-     
+    
     idioma = menu();
+    
+    inicializar_azar();
     palabra_al_azar(idioma, contar_palabras(idioma), solucion);
 
-	inicializar_tablero(&partida);
+    inicializar_tablero(&partida);
     resultado=FALSE;
 	do {
 		introducir_palabra(&partida);
